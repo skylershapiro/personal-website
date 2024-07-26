@@ -11,33 +11,56 @@
         }
         .container {
             display: flex;
+        }
+        .sidebar {
+            display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        .profile {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .profile img {
-            border-radius: 50%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 250px;
             margin-right: 20px;
         }
-        .info {
-            max-width: 600px;
+        .sidebar img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
         }
-        .info h1 {
-            margin: 0;
+        .sidebar h2 {
+            margin: 10px 0 5px 0;
         }
-        .contact {
+        .sidebar p {
+            text-align: center;
+            margin: 5px 0;
+        }
+        .sidebar .location {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .sidebar .location img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .sidebar .contact {
             list-style: none;
             padding: 0;
             margin: 10px 0;
+            text-align: center;
         }
-        .contact li {
+        .sidebar .contact li {
             margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .contact a {
+        .sidebar .contact li img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .sidebar .contact a {
             text-decoration: none;
             color: #007acc;
         }
@@ -62,19 +85,42 @@
 </head>
 <body>
     <div class="container">
-        <div class="profile">
-            <img src="profile.jpg" alt="" width="100" height="100">
-            <div class="info">
-                <h1>Skyler Shapiro</h1>
-                <p>inspiring bio.</p>
-                <ul class="contact">
-                    <li>Boston, MA</li>
-                    <li><a href="https://scholar.google.com/citations?user=dGSrRTYAAAAJ&hl=en">Google Scholar</a></li>
-                    <li><a href="https://www.linkedin.com/in/skylershapiro/">LinkedIn</a></li>
-                </ul>
+        <div class="sidebar">
+            <img src="profile.jpg">
+            <h2>Skyler Shapiro</h2>
+            <p>stats and ml.</p>
+            <div class="location">
+                <img src="location-icon.png" alt="Location Icon">
+                <span>Boston, MA</span>
             </div>
+            <ul class="contact">
+                <li>
+                    <img src="email-icon.png" alt="Email Icon">
+                    <a href="mailto:email">email@school.edu</a>
+                </li>
+                <li>
+                    <img src="scholar-icon.png" alt="Google Scholar Icon">
+                    <a href="https://scholar.google.com">Google Scholar</a>
+                </li>
+                <li>
+                    <img src="linkedin-icon.png" alt="LinkedIn Icon">
+                    <a href="https://linkedin.com">LinkedIn</a>
+                </li>
+            </ul>
         </div>
         <div class="content">
+            <div class="profile">
+                <img src="profile.jpg" alt="" width="100" height="100">
+                <div class="info">
+
+                    <p>inspiring bio.</p>
+                    <ul class="contact">
+                        <li>Boston, MA</li>
+                        <li><a href="https://scholar.google.com/citations?user=dGSrRTYAAAAJ&hl=en">Google Scholar</a></li>
+                        <li><a href="https://www.linkedin.com/in/skylershapiro/">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
             <p> Hi! I'm a rising senior at Cornell University studying statistics and computer science. I'm also a researcher at the Laboratory of Systems Pharmacology at Harvard Medical School advised by Dr. Mark Albers as well as the Lab for Computational Physiology at Massachusetts Institute of Technology advised by Dr. Leo Celi.</p>
             <p>I am currently investigating blahblahblah</p>
             
@@ -83,8 +129,8 @@
                 <div class="paper">
                     <p><strong>Paper Title</strong><br>
                     Author1, Author2<br>
-                    <em>Nature, 2026</em>, <a href="https:google.comz">[paper]</a></p>
-                
+                    <em>Nature, 2026</em>, <a href="https://google.comz">[paper]</a></p>
+                </div>
             </div>
         </div>
     </div>
